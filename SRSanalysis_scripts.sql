@@ -1,6 +1,6 @@
 USE [SRSAnalysis]
 GO
-/****** Object:  UserDefinedFunction [dbo].[is_in_d]    Script Date: 03/04/2013 17:21:24 ******/
+/****** Object:  UserDefinedFunction [dbo].[is_in_d]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -53,7 +53,7 @@ BEGIN
 
 END
 GO
-/****** Object:  UserDefinedFunction [dbo].[f_isinfharea]    Script Date: 03/04/2013 17:21:24 ******/
+/****** Object:  UserDefinedFunction [dbo].[f_isinfharea]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateTritium1]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateTritium1]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,7 +177,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateTables4R]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateTables4R]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -545,7 +545,7 @@ RUTHENIUM-106
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateTableCorrelations4R]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateTableCorrelations4R]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -663,7 +663,7 @@ BEGIN
       ,[MQUARTER]
       ,[ANALYTE_NAME]
       ,CONVERT(float,[RESULT]) as [RESULT]
-      ,[RESULT_UNITS] from [SRSAnalysis].[dbo].[results4R]) p
+      from [SRSAnalysis].[dbo].[results4R]) p
     PIVOT
     (
     AVG(RESULT)
@@ -708,7 +708,7 @@ BEGIN
       ,[MQUARTER]
       ,[ANALYTE_NAME]
       ,CONVERT(float,[RESULT]) as [RESULT]
-      ,[RESULT_UNITS] from [SRSAnalysis].[dbo].[resultsC4R]) p
+      from [SRSAnalysis].[dbo].[resultsC4R]) p
     PIVOT
     (
     AVG(RESULT)
@@ -749,7 +749,7 @@ RUTHENIUM-106
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateInorganics]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateInorganics]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -785,7 +785,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateDCTables]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateDCTables]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1073,7 +1073,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateAllWaterLevels]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateAllWaterLevels]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1281,7 +1281,7 @@ create index Allwaterlevels_stationseq_idx
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateAllSamples]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateAllSamples]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1471,7 +1471,7 @@ where [RECORD_MODIFIED_DATE]='NULL'
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateAllResults]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateAllResults]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1667,7 +1667,7 @@ where[RESULT_TYPE]='NULL'
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CleanAllStations]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CleanAllStations]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1902,7 +1902,7 @@ where [RECORD_MODIFIED_DATE]='NULL'
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CleanAllSamples]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CleanAllSamples]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1991,7 +1991,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CleanAllResults]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CleanAllResults]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2177,7 +2177,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateAllStations]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateAllStations]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2377,7 +2377,7 @@ where [RECORD_MODIFIED_DATE]='NULL'
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CreateAllTables]    Script Date: 03/04/2013 17:21:23 ******/
+/****** Object:  StoredProcedure [dbo].[CreateAllTables]    Script Date: 03/04/2013 17:28:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
